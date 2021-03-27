@@ -1,0 +1,29 @@
+public abstract class Shape implements Locatable
+{
+   //properties
+   private int x;
+   private int y;
+   
+   //constructors
+   public Shape( int x, int y)
+   {
+      this.x = x;
+      this.y = y;
+   }
+   
+   abstract double getArea();
+   
+   public int getX()
+   {
+      return x;
+   }
+   public int getY()
+   {
+      return y;
+   }
+   public void setLocation( int x, int y)
+   {
+      this.x = x;
+      this.y = y;
+   }
+}

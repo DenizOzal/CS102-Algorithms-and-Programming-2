@@ -1,0 +1,4 @@
+public class MySimpleURLReader extends SimpleURLReader
+{
+  dfd
+}

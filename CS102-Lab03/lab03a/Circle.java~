@@ -1,0 +1,27 @@
+public class Circle extends Shape
+{
+   // properties
+   private int radius;
+   private int x;
+   private int y;
+   
+   //constructors
+   public Circle( int radius, int x, int y)
+   {
+      this.radius = radius;
+      setLocation( x, y);
+   }
+   
+   //@Override
+   double getArea()
+   {
+      return Math.PI * radius * radius;
+   }
+   
+    public String toString()
+   {
+      return ( "the circle's radius is " + radius + " area is " + getArea() + " x is " + getX() + " y is " + getY());
+   }
+   
+   
+}

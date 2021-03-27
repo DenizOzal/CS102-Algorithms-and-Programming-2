@@ -1,0 +1,21 @@
+import javax.swing.*;
+
+
+public class Main
+{
+   public static void main( String[] args)
+   {
+      JFrame frame = new JFrame();
+      ButtonPanel panel = new ButtonPanel();
+      frame.setTitle( "POTLUCK");
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      frame.add( panel);
+      frame.pack();
+      frame.setVisible( true);
+     
+      
+       
+      
+      
+   }
+}

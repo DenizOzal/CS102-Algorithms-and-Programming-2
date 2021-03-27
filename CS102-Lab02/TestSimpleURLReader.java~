@@ -1,0 +1,29 @@
+ import cs1.SimpleURLReader;
+ public class TestSimpleURLReader
+ {
+//   // properties
+//   
+//   private String url;
+//   private int noOfLines;
+//   
+//   // constructors
+//   
+//    public SimpleURLReader ( String url)
+//   {
+//     this.url = url;
+//     noOfLines = 0;
+//   }
+//   // methodds
+//    
+//    public String getPageContents()
+//    {
+//      return url;
+//    }
+//    
+//    public int getLineCount()
+//    {
+//      return noOfLines;
+//    }
+//    
+   
+ }

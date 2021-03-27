@@ -1,0 +1,90 @@
+import java.util.Scanner;
+public class ShapeTester
+{
+   private static void menu()
+   {
+      System.out.println( "(1) Create an empty set of shapes\n"
+                            +"(2) Add Circle\n"
+                            +"(3) Add Rectangle\n"
+                            +"(4) The total surface Area\n"
+                            +"(5) Informations about the shapes\n"
+                            +"(6) Quit");
+   }
+   public static void main( String[] args)
+   {
+      Scanner scan = new Scanner( System.in);
+      // variables
+      ShapeContainer shape;
+      int option;
+      boolean flag;
+      int radius;
+      int width;
+      int heigth;
+      Circle circle;
+      Rectangle rectangle;
+      
+      // initialized variables
+      option = 0;
+      flag = true;
+      radius = 0;
+      width = 0;
+      heigth = 0;
+      
+      
+      System.out.println( "Welcome to the ShapeTester!");
+      menu();
+      option = scan.nextInt();
+      if ( option == 1)
+      {
+         shape = new ShapeContainer();
+         do
+         {
+            menu();
+            option = scan.nextInt();
+            if ( option == 2)
+            {
+               System.out.println(" Please enter the radius");
+               radius = scan.nextInt();
+               circle = new Circle( radius);
+               shape.add( circle);
+            }
+            else if ( option == 3)
+            {
+               System.out.println(" Please enter the width");
+               width = scan.nextInt();
+               System.out.println(" Please enter the height");
+               heigth = scan.nextInt();
+               rectangle = new Rectangle( width, heigth);
+               shape.add( rectangle);
+            }
+            else if ( option == 4)
+            {
+               System.out.println( "The total area: " + shape.getArea());
+            }
+            else if ( option == 5)
+            {
+               System.out.println( shape);
+            }
+            else if ( option == 6)
+            {
+               flag = false;
+            }
+         } while( flag);
+      }
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

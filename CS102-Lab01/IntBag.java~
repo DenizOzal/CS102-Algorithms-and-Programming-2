@@ -1,0 +1,105 @@
+public class IntBag
+{
+  //properties
+  private int[] bag;
+  private int valid;
+  
+  //constructor
+  public IntBag()
+  {
+     this.bag = new int[100];
+     for ( int i = 0; i < bag.length; i++)
+     {
+      bag[i] = 0;
+     }
+    valid = 0;
+  }
+  public IntBag( int maxElements)
+  {
+    this.bag = new int[100];
+    valid = maxElements;
+  }
+  //methods
+  public void add( int value)
+  {
+    if ( valid > 100)
+    {
+     System.out.println( "Please enter by considering your store length");
+    }
+    else
+    {
+     bag[valid] = value;
+     valid++;
+    }
+  }
+    
+  public void add( int location,int value)
+  {
+    if ( location < 0 || location >= bag.length)
+    {
+      System.out.println( "Please enter by considering your store length");
+    }
+    else
+    {
+      for ( int i = valid - 1; i >= location; i--)
+      {
+        bag[i+1] = bag[i];
+      }
+      bag[location] = value;
+      valid++;
+    }
+  }
+  
+  public void remove( int location)
+  {
+    if ( location < 0 || location > valid)
+    {
+      System.out.println( "Please enter by considering your store length");
+    }
+    else
+    {
+      for ( int i = location; i < valid - 1; i++)
+      {
+        bag[i] = bag[i+1];
+      }
+      valid--;
+    }
+  }
+  public boolean contains( int value)
+  {
+    for ( int i = 0; i < bag.length; i++)
+    {
+      if ( bag[i] == value)
+      {
+        return true;
+      }
+    }
+    return false;
+  }
+        
+  public String toString()
+  {
+   String str;
+   str = "";
+   for ( int i = 0; i < bag.length; i++)
+   {
+     str = str + " " + bag[i];
+   }
+   return str;
+  }
+  public int size()
+  {
+    return valid;
+  }
+  public int get( int location)
+  {
+    return bag[location];
+  }
+}
+  
+     
+      
+    
+      
+      
+    

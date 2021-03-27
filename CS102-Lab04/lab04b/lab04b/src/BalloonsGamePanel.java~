@@ -1,0 +1,6 @@
+import javax.swing.*;
+import javax.awt.*;
+
+public BalloonsGamePanel extends JPanel
+{
+}

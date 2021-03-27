@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class PartD
+{
+   public static int MostSigToLeast( int n)
+   {
+      int temp;
+      temp = Math.pow( 10, n);
+      start = Math.pow( 10, n);
+      end = Math.pow( 10, n + 1);
+      int i = 0;
+      temp++;
+      if ( temp / Math.pow( 10, n)
+      return mostSigToLeast( n)
+}

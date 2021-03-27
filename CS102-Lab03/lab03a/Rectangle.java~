@@ -1,0 +1,30 @@
+public class Rectangle extends Shape
+{
+   // properties
+   private int width;
+   private int height;
+   private int x;
+   private int y;
+   
+   //constructors
+   public Rectangle( int width, int height, int x, int y)
+   {
+      this.width = width;
+      this.height = height;
+      setLocation( x ,y)
+   }
+   
+   //@Override
+   double getArea()
+   {
+      return width * height;
+   }
+   
+   public String toString()
+   {
+      return ( "the rectangle's width is " + width + " height is " + height + " area is " +
+                getArea() + " x is " + getX() + " y is " + getY());
+   }
+   
+   
+}

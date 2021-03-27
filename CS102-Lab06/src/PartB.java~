@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class PartB
+{
+   public static String getBinaryForm( int decimal)
+   {
+      if ( decimal < 1)
+         return "";
+      return ( getBinaryForm( decimal / 2) + ( decimal % 2));
+//      return ( ( decimal % 2) + getBinaryForm( decimal / 2));
+   }
+   public static void main( String[] args)
+   {
+      Scanner scan = new Scanner( System.in);
+      int decimal;
+      while ( true)
+      {
+         decimal = scan.nextInt();
+         System.out.println( getBinaryForm( decimal));
+      }
+   }  
+}

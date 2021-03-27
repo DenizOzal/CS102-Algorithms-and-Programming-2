@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+public class ShapeContainer 
+{
+   // properties
+   ArrayList<Shape> container;
+   
+   //constructors
+   public ShapeContainer()
+   {
+      container = new ArrayList<Shape>();
+   }
+   
+   //methods
+   
+   public void add( Shape s)
+   {
+      container.add( s);
+   }
+   
+   //@Override
+   double getArea()
+   {
+      double surfaceArea;
+      surfaceArea= 0;
+      for ( int i = 0; i < container.size(); i++)
+      {
+         surfaceArea += container.get(i).getArea();
+      }
+      return surfaceArea; 
+   }
+   public String toString()
+   {
+      String str;
+      str = "";
+      for ( int i = 0; i < container.size(); i++)
+      {
+         str += "The index is " + i + " and " + container.get(i).toString() + "\n"; 
+      }
+      return str;  
+   }
+}

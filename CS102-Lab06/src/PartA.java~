@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class PartA
+{
+   public static int eInString( String input, char ch)
+   {
+      int count;
+      count = 0;
+      int index;
+      index = input.length() - 1;
+      if ( index < 0)
+         return 0;
+      if ( ch == input.charAt( index))
+         count++;
+      return count + eInString( input.substring( 0, input.length() - 1), ch);
+   }
+   
+   public static void main( String[] args)
+   {
+      Scanner scan = new Scanner( System.in);
+      String input;
+      char ch;
+      ch = 'e';
+      while( true)
+      {
+         input = scan.nextLine();
+         System.out.println( eInString( input, ch));
+      }
+   }  
+}   
